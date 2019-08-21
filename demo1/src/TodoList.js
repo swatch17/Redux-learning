@@ -18,7 +18,7 @@ class TodoList extends Component{
     console.log(e.target.value)
     // 创建Action
     const action = {
-      type:'change_input_value',
+      type:'changeInput',
       value:e.target.value
     }
     store.dispatch(action)
@@ -34,6 +34,7 @@ class TodoList extends Component{
   }
 
   render(){
+    console.log(this.state,this.state.inputValue)
     return (
       <div>
         <div>

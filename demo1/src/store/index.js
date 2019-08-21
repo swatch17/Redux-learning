@@ -8,5 +8,5 @@ const store = createStore(
     reducer,
     enhancers 
     )
-
+console.log(store)
 export default store
