@@ -2,10 +2,9 @@ import React from 'react';
 import {Input,List,Button} from 'antd'
 import 'antd/dist/antd.css'
 
-// 无状态组建
+// 无状态组件
 
-const TodoListUi = (props) =>{
-  console.log(props)
+const TodoListUI = (props) =>{
   return(
     <div style={{margin:10}}>
       <div>
@@ -79,4 +78,4 @@ const TodoListUi = (props) =>{
   }
 } */
 
-export default TodoListUi
+export default TodoListUI

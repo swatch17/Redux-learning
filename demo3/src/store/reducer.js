@@ -1,4 +1,4 @@
-import {CHANGE_INPUT,ADD_ITEM,DELETE_ITEM} from './actionTypes'
+import {CHANGE_INPUT,ADD_ITEM,DELETE_ITEM,GET_LIST} from './actionTypes'
 // 默认数据
 const defaultState = {
     inputValue:"Write Something!",
@@ -30,6 +30,12 @@ export default (state = defaultState,action)=>{
     if(action.type===DELETE_ITEM){
         let newState = JSON.parse(JSON.stringify(state))
         newState.list.splice(action.index,1) //删除数组中对应的值
+        return newState
+    }
+
+    if(action.type===GET_LIST){
+        let  newState = JSON.parse(JSON.stringify(state))
+        newState.list = action.list
         return newState
     }
     return state;
